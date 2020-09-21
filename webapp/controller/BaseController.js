@@ -4,7 +4,7 @@ sap.ui.define([
     'sap/ui/core/UIComponent',
   ], function(Controller, History, UIComponent) {
     "use strict";
-  
+
     return Controller.extend("client.controller.BaseController", {
       onInit() {
         this.oDeviceModel = this.getOwnerComponent().getModel('device');
@@ -34,5 +34,11 @@ sap.ui.define([
         if (sPreviousHash !== undefined) window.history.back();
         else this.getRouter().navTo('home', {}, true );
       },
+      getStore() {
+        return this.getOwnerComponent().getModel('store');
+      },
+      dispatch(oNewData) {
+        this.getStore().dispatch(oNewData);
+      }
     });
   });
