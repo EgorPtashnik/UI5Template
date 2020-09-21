@@ -1,0 +1,9 @@
+<mvc:View
+  controllerName='ui5.template.controller.Home'
+  displayBlock='true'
+  xmlns='sap.m'
+  xmlns:mvc='sap.ui.core.mvc'>
+  <Page>
+
+  </Page>>
+</mvc:View>

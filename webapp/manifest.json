@@ -1,0 +1,76 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "ui5.template",
+      "type": "application",
+      "applicationVersion": {
+        "version": "1.0.0"
+      },
+      "title": "UI5 Template",
+      "description": "Template for creating ui5 applications"
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "icons": {
+        "icon": "",
+        "favIcon": "",
+        "phone": "",
+        "phone@2": "",
+        "tablet": "",
+        "tablet@2": ""
+      },
+      "deviceTypes": {
+        "desktop": true,
+        "tablet": true,
+        "phone": true
+      }
+    },
+    "sap.ui5": {
+      "rootView": {
+        "viewName": "ui5.template.view.App",
+        "type": "XML",
+        "async": true,
+        "id": "idApp"
+      },
+      "dependencies": {
+        "minUI5Version": "1.60.0",
+        "libs": {
+          "sap.ui.core": {},
+          "sap.m": {},
+          "sap.ui.layout": {}
+        }
+      },
+      "contentDensities": {
+        "compact": true,
+        "cozy": true
+      },
+      "models": {},
+      "resources": {
+        "css": [{
+          "uri": "css/style.css"
+        }]
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "viewPath": "ui5.template.view",
+          "controlId": "idApp",
+          "controlAggregation": "pages",
+          "async": true
+        },
+        "routes": [{
+          "name": "home",
+          "pattern": "",
+          "target": "home"
+        }],
+        "targets": {
+          "home": {
+            "viewType": "XML",
+            "viewName": "Home"
+          }
+        }
+      }
+    }
+  }
+  
